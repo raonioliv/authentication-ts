@@ -6,11 +6,13 @@
   "scripts": {
     "start": "tsc && node dist/app.js",
     "up": "ts-node .",
-    "dev": "nodemon --exec 'npm run lint && ts-node ./src/server.ts'",
+    "dev": "nodemon --legacy-watch --exec 'npm run lint && ts-node ./src/server.ts'",
     "lint": "eslint ./src --ext .ts",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "comecar": "tsnd .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "c-terminal": "docker exec -it auth-ts-back /bin/sh",
+    "c-logs": "docker logs -f auth-ts-back"
   },
   "keywords": [],
   "author": "",
